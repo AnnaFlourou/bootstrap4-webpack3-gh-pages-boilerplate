@@ -15,7 +15,7 @@ const buildDirectory = resolve(__dirname, 'dist');
 module.exports = (env) => {
   const isProduction = env.production;
   let publicPath = '/';
-  if (isProduction) {
+  if (env.gh) {
     publicPath = './';
   }
   const imagesLocation = 'images/';

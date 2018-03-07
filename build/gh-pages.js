@@ -69,7 +69,7 @@ function runBuild() {
   // Create development build
   console.log('Creating production build');
 
-  exec('yarn run build:prod', () => {
+  exec('yarn run build:gh', () => {
     // Move the dist folder to docs for gh-pages
     ncp.limit = 16;
 
