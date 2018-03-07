@@ -27,7 +27,10 @@ module.exports = (env) => {
 
   return {
     context: sourceDirectory,
-    entry: './index.js',
+    entry: [
+      'webpack-dev-server/client?http://localhost:8080',
+      './index.js'
+    ],
     output: {
       filename: isProduction ? '[name].[chunkhash].js' : '[name].js',
       path: buildDirectory,
@@ -44,6 +47,10 @@ module.exports = (env) => {
         {
           test: /\.css$/,
           loaders: ['raw-loader'],
+        },
+        {
+          test: /\.html$/,
+          loader: ["raw-loader"]
         },
         {
           test: /\.scss$/,
@@ -68,6 +75,10 @@ module.exports = (env) => {
           }),
         },
       ],
+    },
+    devServer: {
+      contentBase: './dist',
+      hot: true
     },
     plugins: [
       new CopyWebpackPlugin([{
