@@ -37,14 +37,21 @@ cd bootstrap4-webpack3-boilerplate
 Install node modules
 
 ```bash
-npm install
+yarn install
 ```
 
 Build production
 
 ```bash
-npm run build:prod
+yarn run build:prod
 ```
+
+Deploy to gh-pages
+
+```bash
+yarn run gh-pages
+```
+Then push to github and allow gh-pages in docs folder in settings
 
 Build version is available in `dist` folder.
 
@@ -55,7 +62,7 @@ Build version is available in `dist` folder.
 For development you can use `webpack-dev-server` by running:
 
 ```bash
-npm run serve
+yarn run serve
 ```
 
 This brings up demo website on [http://localhost:8080](http://localhost:8080).
