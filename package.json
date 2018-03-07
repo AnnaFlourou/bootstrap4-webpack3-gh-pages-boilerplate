@@ -9,6 +9,7 @@
     "test": "npm run eslint",
     "eslint": "./node_modules/.bin/eslint .",
     "rmrf": "rm -rf dist",
+    "gh-pages": "node build/gh-pages.js",
     "build:dev": "npm run rmrf && webpack --env.development",
     "build:prod": "npm run rmrf && webpack -p --env.production",
     "build": "npm run build:dev",
@@ -16,9 +17,17 @@
     "serve:prod": "webpack-dev-server --env.production --content-base dist --host 0.0.0.0"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.6",
+    "args": "^3.0.8",
+    "bootstrap": "4.0.0",
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
     "holderjs": "^2.9.4",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "path": "^0.12.7",
+    "popper.js": "^1.12.9",
+    "rimraf": "^2.6.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
@@ -27,7 +36,7 @@
     "eslint": "^4.1.1",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.6.1",
-    "extract-text-webpack-plugin": "^2.1.2",
+    "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.29.0",
     "imagemin-webpack-plugin": "^1.5.0-beta.0",
     "node-sass": "^4.5.3",
