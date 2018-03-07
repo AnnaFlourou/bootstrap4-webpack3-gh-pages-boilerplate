@@ -69,6 +69,10 @@ This brings up demo website on [http://localhost:8080](http://localhost:8080).
 
 For demo purposes I've copied the [bootstrap 4 album example](https://v4-alpha.getbootstrap.com/examples/album).
 
+# Test the demo
+
+[DEMO](https://riderx.github.io/bootstrap4-webpack3-gh-pages-boilerplate/)
+
 ### Overriding bootstrap defaults
 
 If you want to override bootstrap default variables you can do that by editing the file `_override-bootstrap-defaults.scss` located in `styles` folder.
